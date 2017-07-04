@@ -13,12 +13,13 @@ RUN apt-get update && \
 
 ADD https://repo1.maven.org/maven2/com/facebook/presto/presto-cli/${PRESTO_VERSION}/presto-cli-${PRESTO_VERSION}-executable.jar /usr/local/bin/presto
 
-RUN chmod a+x /usr/local/bin/presto
-
 WORKDIR ${PRESTO_BASE}
 
-COPY configs etc/
-COPY start.sh bin
+COPY etc/ etc/
+COPY templates/ templates/
+COPY cfSync.py .
+
+RUN chmod a+x /usr/local/bin/presto
 
 EXPOSE 8080
 

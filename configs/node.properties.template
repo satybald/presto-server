@@ -1,3 +1,0 @@
-node.environment=production
-node.id={UID}
-node.data-dir=/opt/presto/data
