@@ -18,6 +18,7 @@ WORKDIR ${PRESTO_BASE}
 COPY etc/ etc/
 COPY templates/ templates/
 COPY cfSync.py .
+COPY start.sh bin/
 
 RUN chmod a+x /usr/local/bin/presto
 
