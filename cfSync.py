@@ -20,6 +20,10 @@ def configReplacement(data):
 
 	discvoeryUrl = os.environ['DISCOVERY_URL']
 	data = data.replace("{DISCOVERY_URL}", discvoeryUrl)
+
+	isDiscoveryEnabled = os.environ['IS_DISCOVERY_ENABLED']
+	data = data.replace("{IS_DISCOVERY_ENABLED}", isDiscoveryEnabled)
+	
 	
 	return data
 

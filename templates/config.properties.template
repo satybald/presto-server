@@ -3,5 +3,5 @@ coordinator={IS_COORDINATOR}
 http-server.http.port=8080
 query.max-memory=1GB
 query.max-memory-per-node=5GB
-discovery-server.enabled=true
+discovery-server.enabled={IS_DISCOVERY_ENABLED}
 discovery.uri={DISCOVERY_URL}
