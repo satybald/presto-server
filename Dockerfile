@@ -11,7 +11,7 @@ RUN apt-get update && \
   tar xfz presto-server.tar.gz -C ${PRESTO_BASE} --strip-components=1 && \
   rm presto-server.tar.gz
 
-ADD https://repo1.maven.org/maven2/com/facebook/presto/presto-cli/${PRESTO_VERSION}/presto-cli-${PRESTO_VERSION}-executable.jar /usr/local/bin/presto
+RUN wget https://repo1.maven.org/maven2/com/facebook/presto/presto-cli/${PRESTO_VERSION}/presto-cli-${PRESTO_VERSION}-executable.jar -O /usr/local/bin/presto
 
 WORKDIR ${PRESTO_BASE}
 
